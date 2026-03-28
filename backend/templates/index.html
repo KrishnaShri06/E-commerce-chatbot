@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Support Chatbot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="chat-widget">
+        <div id="chat-header">
+            <div class="header-info">
+                <span class="status-dot"></span>
+                <span>AI Support Agent</span>
+            </div>
+            <button id="minimize-btn">−</button>
+        </div>
+        <div id="chat-body">
+            <div class="message bot-message">
+                Hello! How can I help you with your orders or refunds today?
+            </div>
+        </div>
+        <div id="chat-footer">
+            <input type="text" id="user-input" placeholder="Type your message..." autocomplete="off">
+            <button id="send-btn">
+                <svg viewBox="0 0 24 24" width="20" height="20">
+                    <path fill="currentColor" d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"></path>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- Floating Bubble -->
+    <div id="chat-bubble">
+        <svg viewBox="0 0 24 24" width="30" height="30">
+            <path fill="white" d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"></path>
+        </svg>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

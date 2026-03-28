@@ -1,0 +1,22 @@
+# Dependencies
+node_modules/
+dist/
+build/
+.DS_Store
+
+# Environment Variables (CRITICAL: DO NOT PUSH THESE)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+error.log
+
+# IDE / Editor
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

@@ -1,0 +1,142 @@
+/* ===== PRODUCT CARD ===== */
+.pc-root {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: visible;
+  transition: box-shadow 200ms ease, transform 200ms ease;
+}
+.pc-root:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+}
+
+.pc-link {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Image area */
+.pc-image-box {
+  position: relative;
+  background: var(--gray-50);
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.pc-img {
+  max-height: 150px;
+  max-width: 90%;
+  transition: transform 250ms ease;
+}
+.pc-root:hover .pc-img { transform: scale(1.04); }
+
+.pc-wish-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  transition: color 150ms ease, box-shadow 150ms ease;
+  opacity: 0;
+}
+.pc-root:hover .pc-wish-btn { opacity: 1; }
+.pc-wish-btn:hover { color: var(--danger); box-shadow: var(--shadow-md); }
+
+.pc-discount-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+/* Info */
+.pc-info {
+  padding: 12px 14px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  flex: 1;
+}
+
+.pc-category {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.pc-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.4;
+  min-height: 2.5rem;
+}
+
+/* Rating */
+.pc-rating {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.pc-rating__score {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  background: #388e3c;
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 100px;
+}
+
+/* Price */
+.pc-price-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 2px;
+}
+.pc-price {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text);
+}
+.pc-original {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-decoration: line-through;
+}
+
+/* Actions */
+.pc-actions {
+  padding: 10px 14px 14px;
+  border-top: 1px solid var(--border);
+  margin-top: auto;
+}
+.pc-actions .w-full { width: 100%; justify-content: center; }
